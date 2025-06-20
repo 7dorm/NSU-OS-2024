@@ -23,9 +23,12 @@ typedef struct {
     char *dst_entry;
 } CopyArgs;
 
+void *copy_thread(void *arg);
+
 unsigned long get_tid() {
     return (unsigned long)pthread_self();
 }
+
 
 long get_open_fds() {
     long count = 0;
